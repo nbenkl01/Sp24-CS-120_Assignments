@@ -1,0 +1,145 @@
+/* General margin and padding reset */
+body, h1, h2, p, ul, table, form {
+  margin: 5px;
+  padding: 5px;
+}
+
+/* General image */
+img {
+  float: right;
+  margin: 0 0 10px 10px;
+  max-width: 300px;
+}
+
+/* Body */
+body {
+  font-family: "Open Sans", sans-serif; 
+}
+
+/* Headers */
+h1 {
+  color: #400c74; 
+  font-size: xx-large;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+h2 {
+  color: #590ca6; 
+  font-size: x-large;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+h3 {
+  color: #6f00de; 
+  font-size: large;
+  margin-top: 0px;
+}
+
+/* Pet List */
+ul {
+  border: 1px solid #ccc;
+  width: 50%;
+  margin: 0 auto;
+  padding-left: 30px;
+}
+
+/* Favorite Food */
+
+.food-container {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.food-image {
+  flex: 0 0 45%;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e5/Bucharest_Shawarma_%28cropped%29.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+}
+
+.explanatory-text {
+  flex: 0 0 45%;
+  margin-left: 20px;
+}
+
+/* Books Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+}
+
+th{
+  background:  #d4bdeb;
+}
+
+table tr:nth-child(odd) {
+  background-color: #f3f0f6;
+}
+
+table tr:nth-child(even) {
+  background-color: #cac6ce;
+}
+
+table img {
+  max-width: 100px;
+  height: auto;
+}
+
+/* Contact Info Form */
+
+.form-container {
+  max-width: 500px;
+  margin: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  text-align: right;
+  margin-bottom: 10px;
+  /* margin-right: 10px; */
+  width: 25%;
+}
+
+input, select {
+  width: 70%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.form-row input[type="submit"] {
+  margin-left: auto;
+}
+
+/* Fixed position icons */
+.icons-container {
+  position: fixed;
+  top: 100px;
+  right: 35px;
+}
+
+.icons-container img {
+  width: 30px;
+  margin-right: 10px;
+}
+  
