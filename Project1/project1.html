@@ -1,16 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1 - Coming Soon</title>
+  <title>Portfolio Website-BandC</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- linking css file -->
+  <link rel="stylesheet" href="style.css">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
+        <div class="container">
+            <a class="navbar-brand" href="#">The Troubadour Twins</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#schedule">Schedule/Tour</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
 
-    <h1>Coming Soon</h1>
+    <!-- main banner -->
+    <section class="bgimage" id="home">
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+                <h2 class="hero_title">The Troubadour Twins</h2>
+                <p class="hero_desc">The Finest Pair of Performers from Waterdeep to the Gate</p>
+            </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- about section-->
+    <section id="about">
+        <div class="container mt-4 pt-4">
+            <h1 class="text-center">About Us</h1>
+            <div class="row mt-4">
+                <!-- Band -->
+                <h2 class="text-center">The Troup</h2>
+                <div class="row mt-3">
+                    <p> 
+                        Hello! We are Buster & Charlie, The Troubadour Twins, and welcome to our whimsical world. Here, tunes tangle with tumbling and melodies merge with mischief! 
+                        Hailing from the enchanting city of Waterdeep, we invite you on a journey through realms of rhythm and harmony. 
+                        With Buster's nimble fingers dancing across the strings of his lute and Charlie's enchanting voice weaving tales of wonder, 
+                        our performances are not just concerts but unforgettable experiences. 
+                        Drawing inspiration from the bustling streets of Waterdeep, 
+                        where every corner holds a story and every alley echoes with the promise of adventure, 
+                        our music is a celebration of life, love, and the joy of discovery.
+                        
+                        From lively taverns to majestic courts, we've regaled audiences with our melodies, earning a reputation as the troubadours of the fantastical.
+                        Whether you're a seasoned adventurer seeking respite from your quests or a weary traveler yearning for tales of far-off lands,
+                        we welcome you with open arms and melodies that will transport you to realms beyond imagination.
+                        
+                        So come and join us as we embark on a musical odyssey filled with laughter, love, and the magic of music. 
+
+                    </p>
+                </div>
+
+                <!-- Buster -->
+                <h2 class="text-center">Members</h2>
+                <div class="col-lg-4">
+                    <img src="images/about_buster.jpg" class= "imageAboutPage" alt="">
+                </div>
+
+                <div class="col-lg-8">
+                    <h3 class="text-left">Buster--Lutist, Lyracist</h3>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Name: Buster Marx</li>
+                                <li>Age: 32</li>
+                                <li>Role: Musical Lead</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <p> 
+                        Meet Buster, the masterful lutist and musical maestro behind the enchanting melodies of The Troubadour Twins.
+                        Buster's love affair with music began at a young age when he first laid eyes on the intricate curves of a lute. 
+                        From that moment on, his destiny was set: to serenade the world with his soul-stirring tunes.
+
+                        With fingers as nimble as a rogue's and a heart as vast as the sea, Buster's performances are a testament to his unwavering passion for his craft. 
+                        Whether he's strumming the strings of his lute with gentle precision or unleashing a flurry of notes in a whirlwind of sound, Buster's music transports
+                        listeners to realms of wonder and whimsy.
+
+                        But Buster's talents extend far beyond mere musical mastery. He's a storyteller at heart, weaving tales of heroism, romance, and adventure with each pluck of his strings.
+                        His infectious energy and boundless enthusiasm light up every stage he graces, leaving audiences spellbound and craving for more.
+
+                        Offstage, Buster is a jovial soul with a mischievous twinkle in his eye. When he's not captivating audiences with his performances, you can find him exploring the hidden 
+                        nooks and crannies of Waterdeep, seeking inspiration in every shadowy alley and bustling marketplace.
+
+                        Join Buster on his musical journey and let the enchanting melodies of his lute sweep you away on a magical adventure you'll never forget.
+                        The world is our stage, and the music never stops.
+                    </p>
+                </div>
+
+                <!-- Charlie -->
+                <div class="col-lg-4">
+                    <img src="images/about_charlie.jpg" class= "imageAboutPage" alt="">
+                </div>
+
+                <div class="col-lg-8">
+                    <h3 class="text-left">Charlie--Vocals, Visuals, Acrobatics</h3>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Name: Charlie Marx</li>
+                                <li>Age: 32</li>
+                                <li>Role: Cheif Entertainment Official</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <p> 
+                        Allow me to introduce Charlie, the charismatic vocalist, agile acrobat, and all-around entertainer extraordinaire of The Troubadour Twins.
+                        Charlie's passion for performance was ignited at a tender age, fueled by a boundless energy and an insatiable thirst for adventure.
+                        
+                        With a voice as melodious as a songbird and a stage presence that commands attention, Charlie captivates audiences with his enchanting vocals and dazzling acrobatic feats. 
+                        Whether he's belting out ballads that tug at the heartstrings or executing gravity-defying flips and spins, Charlie's performances are a mesmerizing blend of music, movement, and magic.
+                        
+                        But Charlie's talents extend far beyond the confines of the stage. Spinning tales of daring escapades and thrilling exploits with every flick of his wrist and twist of his body, Charlie's
+                        infectious enthusiasm and boundless creativity infuse every performance with a sense of wonder and joy, leaving audiences spellbound and eager for more.
+
+                        Offstage, Charlie is a free spirit with a zest for life and a love of exploration. When he's not dazzling crowds with his performances, you can find him roaming the streets of 
+                        Waterdeep, seeking out new adventures and embracing every opportunity to experience the wonders of the world around him.
+
+                        Join Charlie and let the magic of his music and movement transport you to realms of excitement and delight.
+                    </p>
+                </div>
+
+                <!-- Chicken -->
+                <div class="col-lg-4">
+                    <img src="images/about_cluck.jpg" class= "imageAboutPage" alt="">
+                </div>
+
+                <div class="col-lg-8">
+                    <h3 class="text-left">Cluck--Management</h3>
+                    <div class="col-md-6">
+                        <ul>
+                            <li>Name: Cluck</li>
+                            <li>Age: 6</li>
+                            <li>Role: Head of Opperations</li>
+
+                        </ul>
+                    </div>
+                    <p> 
+                        Meet Cluck, the feathered manager extraordinaire of The Troubadour Twins! Hatched by the twins in their Waterdeep home, Cluck may not be a great singer, but he more than makes up for it with his sharp business acumen.
+
+                        As the trusted manager of the troupe, Cluck ensures that every aspect of The Troubadour Twins' performances runs like a well-oiled machine. 
+                        From booking gigs and managing finances to organizing rehearsals and coordinating travel arrangements, Cluck handles it all with poise and professionalism.
+
+                        Despite his lack of hands, Cluck is a master multitasker, effortlessly juggling the myriad responsibilities that come with running a successful musical ensemble. 
+                        His keen eye for detail and unwavering dedication to the troupe's success make him an indispensable member of The Troubadour Twins family.
+
+                        However, Cluck's talents extend far beyond the realm of management. With a keen ear for music and a natural sense of rhythm, he's been known to lend his vocals to the 
+                        occasional chorus, adding a touch of whimsy to the troupe's performances.
+
+                        Offstage, Cluck enjoys pecking in the finer patches of dirt around Waterdeep and soaking in the sights and sounds of the city he calls home. 
+                        When he's not busy managing the troupe, you can often find him perched atop a nearby roof, basking in the warmth of the sun and dreaming up new ways to take
+                        The Troubadour Twins to even greater heights.
+                    </p>
+                </div>
+            </div>
+    </section>
+
+    <!-- services section-->
+    <section id="services">
+        <div class="container mt-3">
+            <h1 class="text-center">Services</h1>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/servicesprivate.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Private Events</h4>
+                            <p class="card-text"> Elevate your exclusive event with our exceptional entertainment extravaganza! Whether wonderous wedding, guildhall gathering, or brewhouse birthday bash, we guarantee a sensational spectacle.
+                                Our array of awe-inspiring acts will amaze all attendees. With professional sound, stunning staging, and luminous lighting, we assure an atmosphere brimming with excitement and enchantment. 
+                                Let us turn your private party into a premium production that will be praised for years to come. 
+                                Contact us today to add an extra dash of dazzle to your distinguished affair!
+                            </p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Book Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="images/servicespublic.jpeg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Public Performances</h4>
+                            <p class="card-text">
+                            Are you a small business owner looking to spice up your stall? A public official planning popular festivities? An alehouse attended desirious of diversions for plastered patrons?
+                            Embark on an extraordinary expedition into entertainment excellence with our thrilling troupe!
+                            We provide a plethora of performances to please the public.
+                            From captivating carnival acts and spellbinding street performances to baudy ballads and perhaps a pinch of magic, our acts will amaze any audience.
+                            Let us transform your event into a sensational spectacle to captivate crowds and create cherished memories. 
+                            </p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Book Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="images/servicestour.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Tours</h4>
+                            <p class="card-text">Putting together a tantalizing troup to tour the towns of Faerun from Neverwinter to Baldur's Gate? Include the two of us in your act and 
+                                watch your pockets overflow with the crowds we will draw.
+                                Our entertainment experience will enrich your journey with unforgettable performances. 
+                                
+                                With charismatic comedy, musical 'minstrel'-ations, entrancing anecdotes, and death-defying displays of acrobatic aplaum we offer a diverse array of acts to enhance every step of your tour.
+                                Let us transform your tour into an immersive experience that leaves travelers awestruck and eager for more. 
+
+
+
+                            </p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Book Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+    </br>
+
+    <!-- schedule section-->
+    <section id="schedule">
+        <style>
+            table {
+            width: 100%;
+            border-collapse: collapse;
+            }
+            th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            }
+            th {
+            background-color: #f2f2f2;
+            }
+        </style>          
+        <div class="container">
+            <h1 class="text-center">Schedule</h1>
+        </br>
+            <h2 class="text-center">Tour Schedule</h2>
+            <table>
+                <tr>
+                <th>Date</th>
+                <th>City</th>
+                <th>Venue</th>
+                <th>Time</th>
+                </tr>
+                <tr>
+                <td>March 15, 2024</td>
+                <td>Waterdeep</td>
+                <td>The Silver Harp Tavern</td>
+                <td>8:00 PM</td>
+                </tr>
+                <tr>
+                <td>March 17, 2024</td>
+                <td>Neverwinter</td>
+                <td>The Moonstone Arena</td>
+                <td>9:00 PM</td>
+                </tr>
+                <tr>
+                <td>March 20, 2024</td>
+                <td>Baldur's Gate</td>
+                <td>The Black Boar Inn</td>
+                <td>7:30 PM</td>
+                </tr>
+                <tr>
+                <td>March 22, 2024</td>
+                <td>Daggerford</td>
+                <td>The Daggerford Amphitheater</td>
+                <td>8:30 PM</td>
+                </tr>
+                <tr>
+                <td>March 25, 2024</td>
+                <td>Silverymoon</td>
+                <td>The Moonlit Grove</td>
+                <td>8:00 PM</td>
+                </tr>
+                <tr>
+                <td>March 28, 2024</td>
+                <td>Waterdeep</td>
+                <td>The Castle Ward Amphitheater</td>
+                <td>7:00 PM</td>
+                </tr>
+            </table>
+            </br>
+            <h2 class="text-center">Daytime Tred</h2>
+            <table>
+                <tr>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+                <tr>
+                    <td>The Yawning Portal Inn</td>
+                    <td>The Plinth</td>
+                    <td>The Market Square</td>
+                    <td>The City Gardens</td>
+                    <td>The Castle Ward</td>
+                    <td>The Dock Ward</td>
+                    <td>The Field of Triumph</td>
+                </tr>
+                </table>
+                *Unless we're on tour you can usually find us playing at these locations throughtout the week.
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section-->
+    <section id="contact">
+        <div class="container mt-3 contactContent">
+            <h1 class="text-center">Contact</h1>
+
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                    <h2 class="text-center">Find Us</h2>
+                    <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
+                    <div style="max-width:100%;overflow:hidden;color:red;width:800px;height:500px;">
+                        <div id="embedmap-canvas" style="height:100%; width:100%;max-width:100%;">
+                            <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.aidedd.org/atlas/index.php?map=W&l=1"> 
+                                <!-- https://www.aidedd.org/atlas/index.php?map=R&l=1 -->
+                            </iframe>
+                        </div>
+                        <a class="googlemaps-html" href="https://www.embed-map.com" id="get-data-forembedmap">https://www.embed-map.com</a>
+                        <style>#embedmap-canvas img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}
+                        </style>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- form fields -->
+                    <h2 class="text-center">Message Us</h2>
+                    <form>
+                        <input type="text" class="form-control form-control-lg" placeholder="Name">
+                        <input type="email" class="form-control mt-3" placeholder="Email">
+                        <input type="text" class="form-control mt-3" placeholder="Subject">
+                        <div class="mb-3 mt-3">
+                            <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Project Details"></textarea>
+                        </div>
+                    </form>
+                    <button type="button" class="btn btn-success mt-3">Contact Us</button>
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section-->
+    <footer class="footer fixed-bottom footer-dark footerScroll" id="footer">
+        <div class="container-fluid">
+            <div class="footer-content">
+                <!-- social media icons -->
+                <p class="copyright">&copy; 2024 Troubadour Twins LLC. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- load javascript after loading all html content -->
+    <script src="script.js"></script>
 </body>
-
 </html>
