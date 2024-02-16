@@ -28,7 +28,7 @@ body {
 /* Band background image */
 .bgimage {
     height: 100vh;
-    background: url('images/bandImage.webp') center center/cover fixed;
+    background: url('./images/bandImage.webp') center center/cover fixed;
     position: relative;
 }
 
