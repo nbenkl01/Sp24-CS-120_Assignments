@@ -1,23 +1,46 @@
-/* display background color black on navbar scroll */
+/* Headers */
+h1, h2, h3 {
+    font-family: 'Precious', cursive;
+}
+
+h1 {
+    font-size: 45pt;
+}
+  
+h2 {
+    font-size: 30pt;
+}
+  
+h3 {
+    font-size: 23pt;
+}
+
+/* color black on navbar scroll */
 .navbarScroll.navbarDark {
     background-color: black;
 }
 
-/* hero background image */
+/* band background image */
 .bgimage {
     height:100vh;
-    background: url('images/heroImage.jpg');
+    background: url('images/bandImage.jpg');
     background-size:cover;
-    position:center right;
+    /* background-origin: content-box; */
+    background-attachment: local;
+    /* backg */
+    background-position: center center;
+    position:center;
 }
-/* text css above hero image*/
-.hero_title {
+
+/* text css above band image*/
+.band_title {
     font-size: 4.5rem;
 }
-.hero_desc {
+.band_desc {
     font-size: 2rem;
 }
-.hero-text {
+.band-text {
+    font-family: 'Precious', cursive;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -60,7 +83,7 @@
     border: 1px solid #008000;
 }
 
-/* social media icons styling */
+/* social media icons */
 .social-icons {
     font-size: 26px;
     display: flex;
@@ -82,18 +105,14 @@
 .fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
     color: #008000;
 }
-/* .fab {
-    color: #000000;
-} */
 .fab {
     color: white;
 }
 
 
-/* footer styling */
+/* footer */
 #footer {
-    height: 40px; /* Adjust height as needed */
-    /* padding: 5px; Adjust padding as needed */
+    height: 40px;
     text-align: center ;
 }
 
@@ -105,19 +124,19 @@
 }
 
 .footerScroll.footerDark .footer-content{
-    color: black; /* Text color when scrolling */
+    color: black; /* text color when scrolling */
 }
 
 .footerScroll.footerDark .fab{
-    color: black; /* Icon color when scrolling */
+    color: black; /* icon color when scrolling */
 }
 
 .footerScroll p {
     margin: 0;
-    line-height: 10px; /* Adjust line height as needed */
+    line-height: 10px;
   }
 
-/* display background color on footer scroll */
+/* background color on scrolling */
 .footerScroll.footerDark {
     background-color: #d5d5d6;
     height:10px;
