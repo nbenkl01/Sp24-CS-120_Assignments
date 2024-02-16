@@ -107,6 +107,10 @@ body {
     color: white;
 }
 
+.copyright {
+    font-size: small;
+}
+
 .footerScroll.footerDark .footer-content {
     color: black; /* Text color when scrolling */
 }
