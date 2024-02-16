@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 4 Solution</title>
+    <script src="shared_functions.js"></script>
+</head>
+<body>
+    <script>
+        let startRange = validateInt("Enter starting number:");
+        let endRange = validateInt("Enter ending number:");
+
+        let sum = 0;
+        let odds = [];
+
+        for (let i = startRange; i <= endRange; i++) {
+            if (i % 2 !== 0) {
+                odds.push(i)
+                sum += i;
+            }
+        }
+
+        document.write("<p>Odd numbers in the range " + startRange + " to " + endRange + ": " + odds.join(", ") + "</p>");
+        document.write("<p>Sum of numbers in the range: " + sum + "</p>");
+
+        generateGoBackButton();
+    </script>
+</body>
+</html>

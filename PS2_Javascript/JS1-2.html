@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 2 Solution</title>
+    <script src="shared_functions.js"></script>
+</head>
+<body>
+    <script>
+        let fahrenheitTemp = validateFloat("Enter the temperature in Fahrenheit:");
+
+        let celsiusTemp = (fahrenheitTemp - 32) * (5/9);
+        alert("Temperature in Celsius: " + celsiusTemp.toFixed(2));
+
+        let celsiusInput = parseFloat(prompt("Enter the temperature in Celsius:"));
+
+        let fahrenheitResult = (celsiusInput * (9/5)) + 32;
+        alert("Temperature in Fahrenheit: " + fahrenheitResult.toFixed(2));
+
+        generateGoBackButton()
+    </script>
+</body>
+</html>

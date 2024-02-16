@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 1 Solution</title>
+    <script src="shared_functions.js"></script>
+</head>
+<body>
+    <script>
+        let firstName = prompt("Enter your first name:");
+        let lastName = prompt("Enter your last name:");
+
+        let fullName = firstName + " " + lastName;
+        alert("Your name is " + fullName);
+
+        let numberOfChildren = validateInt("How many children do you have?");
+
+        let displayText = numberOfChildren === 0 ? "You have no children" :
+                          numberOfChildren === 1 ? "You have 1 child" :
+                          "You have " + numberOfChildren + " children";
+        
+        document.write("<p>" + displayText + "</p>");
+                
+        generateGoBackButton()
+    </script>
+</body>
+</html>

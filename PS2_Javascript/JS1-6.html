@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 6 Solution</title>
+    <script src="shared_functions.js"></script>
+</head>
+<body>
+    <script>
+        function count(array, value) {
+            let count = 0;
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] < value) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        function countAndDisplay(numbers, value) {
+            let result = count(numbers, value);
+            document.write("<p>Array: [" + numbers.join(", ") + "]</p>");
+            document.write("<p>Value: " + value + "</p>");
+            document.write("<p>Number of numbers in 'Array' less than " + value + " --- " + result + "</p>");
+        }
+
+        function runTest() {
+            let numbers = [3, 55, 30, 28, 9, 12];
+            let value = 10;
+            countAndDisplay(numbers, value);
+        }
+
+        function enterValues() {
+            let numbers = [];
+            let num;
+            do {
+                num = parseFloat(prompt("Enter a number (or 'done' to finish input):"));
+                if (!isNaN(num)) {
+                    numbers.push(num);
+                }
+            } while (!isNaN(num));
+
+            let value = validateInt("Enter a value for comparison:");
+            countAndDisplay(numbers, value);
+        }
+
+        showOptions();
+        generateGoBackButton();
+    </script>
+</body>
+</html>

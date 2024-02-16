@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 5 Solution</title>
+    <script src="shared_functions.js"></script>
+</head>
+<body>
+    <script>
+        function displayTimesTable(number) {
+            for (let i = 1; i <= 12; i++) {
+                document.write("<p>" + number + " x " + i + " = " + (number * i) + "</p>");
+            }
+        }
+
+        function runTest() {
+            displayTimesTable(3);
+        }
+
+        function enterValues() {
+            let userNumber = validateFloat("Enter a number:");
+            displayTimesTable(userNumber);
+        }
+
+        showOptions();
+        generateGoBackButton();
+    </script>
+</body>
+</html>
+

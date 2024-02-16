@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 3 Solution</title>
+    <script src="shared_functions.js"></script>
+</head>
+<body>
+    <script>
+        let num1 = validateFloat("Enter first number:");
+        let num2 = validateFloat("Enter second number:");
+
+        let smaller, larger;
+
+        if (num1 < num2) {
+            smaller = num1;
+            larger = num2;
+        } else {
+            smaller = num2;
+            larger = num1;
+        }
+
+        document.write("<p>" + smaller + " " + larger + "</p>");
+
+        generateGoBackButton()
+    </script>
+</body>
+</html>
