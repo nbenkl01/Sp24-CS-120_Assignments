@@ -20,6 +20,11 @@ body {
     padding-bottom: 50px;
 }
 
+/* Navbar content color */
+.navbar-dark .navbar-nav .nav-item .nav-link {
+    color: white !important;
+}
+
 /* Navbar color on scroll */
 .navbarScroll.navbarDark {
     background-color: black;
