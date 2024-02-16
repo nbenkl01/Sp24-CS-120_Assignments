@@ -1,44 +1,41 @@
-// add class navbarDark on navbar scroll
+// Cache frequently accessed DOM elements
 const header = document.querySelector('.navbar');
 const footer = document.querySelector('.footer');
-console.log(header)
-console.log(footer)
-window.onscroll = function() {
-    const top = window.scrollY;
-    if(top >=10) {
-        footer.classList.add('footerDark');
-        header.classList.add('navbarDark');
-    }else {
-        header.classList.remove('navbarDark');
-        footer.classList.remove('footerDark');
-    }
-}
-// collapse navbar after click on small devices
-const navLinks = document.querySelectorAll('.nav-item')
-const menuToggle = document.getElementById('navbarSupportedContent')
+const menuToggle = document.getElementById('navbarSupportedContent');
+const downloadBtn = document.getElementById('download-btn');
+const tourTable = document.getElementById('tour-table');
+const daytimeTable = document.getElementById('daytime-table');
 
-navLinks.forEach((l) => {
-    l.addEventListener('click', () => { new bootstrap.Collapse(menuToggle).toggle() })
-})
+// Add class navbarDark on navbar scroll
+let scrolling = false;
+window.addEventListener('scroll', function() {
+    if (!scrolling) {
+        scrolling = true;
+        setTimeout(function() {
+            const top = window.scrollY;
+            if (top >= 10) {
+                footer.classList.add('footerDark');
+                header.classList.add('navbarDark');
+            } else {
+                header.classList.remove('navbarDark');
+                footer.classList.remove('footerDark');
+            }
+            scrolling = false;
+        }, 10);
+    }
+});
+
+// Collapse navbar after click on small devices
+document.querySelectorAll('.nav-item').forEach((l) => {
+    l.addEventListener('click', () => { new bootstrap.Collapse(menuToggle).toggle(); });
+});
 
 // Schedule download
-function downloadTSV(data, filename) {
-    let blob = new Blob([data], { type: 'text/tab-separated-values' });
-    let a = document.createElement('a');
-    a.href = window.URL.createObjectURL(blob);
-    a.download = filename + '.tsv';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-}
-
-document.getElementById('download-btn').addEventListener('click', function () {
-    let tourRows = document.querySelectorAll('#tour-table tr');
-    let daytimeRows = document.querySelectorAll('#daytime-table tr');
+downloadBtn.addEventListener('click', function() {
     let tourTSV = 'Date\tCity\tVenue\tTime\n';
-    let daytimeTSV = 'Day\tSunday\tMonday\tTuesday\tWednesday\tThursday\tFriday\tSaturday\n';
+    let daytimeTSV = 'Sunday\tMonday\tTuesday\tWednesday\tThursday\tFriday\tSaturday\n';
 
-    tourRows.forEach(function(row) {
+    Array.from(tourTable.querySelectorAll('tr')).forEach(function(row) {
         let rowData = [];
         row.querySelectorAll('td').forEach(function(cell) {
             rowData.push(cell.innerText.trim());
@@ -46,7 +43,7 @@ document.getElementById('download-btn').addEventListener('click', function () {
         tourTSV += rowData.join('\t') + '\n';
     });
 
-    daytimeRows.forEach(function(row) {
+    Array.from(daytimeTable.querySelectorAll('tr')).forEach(function(row) {
         let rowData = [];
         row.querySelectorAll('td').forEach(function(cell) {
             rowData.push(cell.innerText.trim());
@@ -54,11 +51,22 @@ document.getElementById('download-btn').addEventListener('click', function () {
         daytimeTSV += rowData.join('\t') + '\n';
     });
 
-    downloadTSV(tourTSV, 'tour_schedule');
-    downloadTSV(daytimeTSV, 'daytime_tred');
+    const combinedTSV = tourTSV + '\n' + daytimeTSV;
+    downloadTSV(combinedTSV, 'combined_schedule');
 });
 
+function downloadTSV(data, filename) {
+    const blob = new Blob([data], { type: 'text/tab-separated-values' });
+    const a = document.createElement('a');
+    a.href = window.URL.createObjectURL(blob);
+    a.download = filename + '.tsv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+// Display thankyou for message message
 function displayMessage() {
-    var messageContainer = document.getElementById("messageContainer");
+    const messageContainer = document.getElementById("messageContainer");
     messageContainer.textContent = "Thanks for the message, we will respond in short order. Look out for our pigeon!";
 }

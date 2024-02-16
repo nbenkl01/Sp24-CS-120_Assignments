@@ -10,35 +10,29 @@ h1 {
 h2 {
     font-size: 30pt;
 }
-  
+
 h3 {
     font-size: 23pt;
 }
 
-/* color black on navbar scroll */
+/* Body */
+body {
+    padding-bottom: 50px;
+}
+
+/* Navbar color on scroll */
 .navbarScroll.navbarDark {
     background-color: black;
 }
 
-/* band background image */
+/* Band background image */
 .bgimage {
-    height:100vh;
-    background: url('images/bandImage.jpg');
-    background-size:cover;
-    /* background-origin: content-box; */
-    background-attachment: local;
-    /* backg */
-    background-position: center center;
-    position:center;
+    height: 100vh;
+    background: url('images/bandImage.webp') center center/cover fixed;
+    position: relative;
 }
 
-/* text css above band image*/
-.band_title {
-    font-size: 4.5rem;
-}
-.band_desc {
-    font-size: 2rem;
-}
+/* Text above band image */
 .band-text {
     font-family: 'Precious', cursive;
     text-align: center;
@@ -49,71 +43,61 @@ h3 {
     color: white;
 }
 
-/* spacing on all sections */
-/* #about, #services, #portfolio, #contact {
-    margin-top: 4rem;
-    padding-top: 4rem;
-} */
-#contact {
-    padding-bottom: 4rem;
-}
-/* about section image css */
+/* About section image */
 .imageAboutPage {
     width: 100%;
     margin-bottom: 10px;
 }
 
-/* services section css */
+/* Services section */
 .servicesText.card {
     height: 240px;
     cursor: pointer;
-  }
+}
+
 .servicesIcon {
     font-size: 36px;
     text-align: center;
-    width: 100%;
 }
+
 .card-title {
     text-align: center;
 }
+
 .card:hover .servicesIcon {
     color: #008000;
 }
+
 .servicesText:hover {
     border: 1px solid #008000;
 }
 
-/* social media icons */
+/* Social media icons */
 .social-icons {
     font-size: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: auto;
-    text-align: bottom;
     cursor: pointer;
 }
 
 .social-icons a {
-    margin-right: 10px; /* Adjust as needed */
+    margin-right: 10px;
 }
 
-.copyright {
-    margin-right: auto; /* Pushes the copyright text to the right */
-}
-
-.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
-    color: #008000;
-}
 .fab {
     color: white;
 }
 
+.fa-facebook:hover, .fa-instagram:hover, .fa-twitter:hover, .fa-linkedin:hover, .fa-twitch:hover {
+    color: #008000;
+}
 
-/* footer */
+/* Footer */
 #footer {
     height: 40px;
-    text-align: center ;
+    text-align: center;
 }
 
 .footer-content {
@@ -123,22 +107,22 @@ h3 {
     color: white;
 }
 
-.footerScroll.footerDark .footer-content{
-    color: black; /* text color when scrolling */
+.footerScroll.footerDark .footer-content {
+    color: black; /* Text color when scrolling */
 }
 
-.footerScroll.footerDark .fab{
-    color: black; /* icon color when scrolling */
+.footerScroll.footerDark .fab {
+    color: black; /* Icon color when scrolling */
 }
 
 .footerScroll p {
     margin: 0;
     line-height: 10px;
-  }
+}
 
-/* background color on scrolling */
+/* Background color on scrolling */
 .footerScroll.footerDark {
     background-color: #d5d5d6;
-    height:10px;
+    height: 10px;
     color: black;
 }
