@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 5</title>
+    <style>
+        #stateListContainer {
+            border: 1px solid black;
+            width: fit-content;
+            margin-top: 10px;
+            padding: 10px;
+        }
+        #clearButton {
+            margin-bottom: 5px;
+        }
+        #stateList {
+            padding-left: 20px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            fillList();
+        }
+        function fillList() {
+            var states = [
+                "Alabama", "Alaska", "Arizona", "Arkansas", "California",
+                "Colorado", "Connecticut", "Delaware", "Florida", "Georgia",
+                "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
+                "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland",
+                "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri",
+                "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey",
+                "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio",
+                "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",
+                "South Dakota", "Tennessee", "Texas", "Utah", "Vermont",
+                "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"
+            ];
+
+            var select = document.getElementById("stateSelect");
+
+            select.innerHTML = '';
+
+            states.forEach(function(state) {
+                var option = document.createElement("option");
+                option.text = state;
+                select.add(option);
+            });
+
+            select.selectedIndex = 0;
+        }
+        function addState() {
+            var select = document.getElementById("stateSelect");
+            var selectedOption = select.options[select.selectedIndex];
+            var state = selectedOption.textContent;
+            var stateList = document.getElementById("stateList");
+            var currentState = stateList.innerHTML;
+
+            var listItem = document.createElement("li");
+            listItem.textContent = state;
+            stateList.appendChild(listItem);
+
+            selectedOption.remove();
+            select.selectedIndex = 0;
+        }
+
+        function clearStates() {
+            var stateList = document.getElementById("stateList");
+            var select = document.getElementById("stateSelect");
+            
+            stateList.innerHTML = "";
+            fillList();
+        }
+    </script>
+</head>
+<body>
+    <select id="stateSelect" size="5"></select>
+    <button onclick="addState()">Add State</button>
+    <div id="stateListContainer">
+        <button id = "clearButton" onclick="clearStates()">Clear States</button>
+        <ol id = "stateList"></ol>
+    </div>
+    <br>
+    <br>
+    <button onclick="window.location.href='PS2-2.html'">Return To ProblemSet 2-2 Page</button>    
+</body>
+</html>
