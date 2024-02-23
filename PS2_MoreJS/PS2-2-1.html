@@ -6,11 +6,10 @@
     <title>Problem 1</title>
     <script>
         window.onload = function getSentance() {
-            var sentence = prompt("Enter a sentence:");
-            document.getElementById("sentence").innerHTML = sentence;
+            countWords()
         };
         function countWords() {
-            var sentence = document.getElementById("sentence").innerHTML;
+            var sentence = prompt("Enter a sentence:");
             var words = sentence.split(" ");
             var numWords = words.length;
             alert("Number of words: " + numWords);
@@ -18,10 +17,6 @@
     </script>
 </head>
 <body>
-    <div id="sentence" style="display: none;"></div>
-    <button onclick="countWords()">Count Words</button>
-    <br>
-    <br>
     <button onclick="window.location.href='PS2-2.html'">Return To ProblemSet 2-2 Page</button>
 </body>
 </html>
