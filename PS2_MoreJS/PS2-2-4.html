@@ -8,13 +8,12 @@
         window.onload = function() {
             var buttons = document.querySelectorAll("button:not(#backbutton)");
             buttons.forEach(function(button) {
-                button.addEventListener("click", function() {
-                    var prefix = this.textContent;
-                    speak(prefix);
-                });
+                button.addEventListener("click", speak)
             });
 
-            function speak(prefix) {
+            function speak() {
+                var button = event.target;
+                var prefix = button.textContent;
                 var userName = document.getElementById("userName").value;
                 alert(prefix + " " + userName);
             }
