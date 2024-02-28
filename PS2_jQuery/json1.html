@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON 1</title>
+</head>
+<body>
+    <script>
+        var songList = [
+            {
+                "title": "Bohemian Rhapsody",
+                "artist": "Queen",
+                "year": 1975,
+                "genres": ["Rock", "Progressive Rock", "Hard Rock"]
+            },
+            {
+                "title": "The Sound of Silence",
+                "artist": "Simon & Garfunkel",
+                "year": 1964,
+                "genres": ["Rock", "Folk Rock"]
+            },
+            {
+                "title": "Hotel California",
+                "artist": "Eagles",
+                "year": 1977,
+                "genres": ["Rock"]
+            },
+            {
+                "title": "Stairway to Heaven",
+                "artist": "Led Zeppelin",
+                "year": 1971,
+                "genres": ["Rock", "Progressive Rock", "Hard Rock"]
+            },
+            {
+                "title": "Rolling in the Deep",
+                "artist": "Adele",
+                "year": 2010,
+                "genres": ["Pop", "R&B", "Soul"]
+            },
+            {
+                "title": "Billie Jean",
+                "artist": "Michael Jackson",
+                "year": 1983,
+                "genres": ["Pop", "Funk", "R&B"]
+            },
+            {
+                "title": "Hurt",
+                "artist": "Johnny Cash",
+                "year": 2002,
+                "genres": ["Country", "Folk", "Alternative Rock"]
+            },
+            {
+                "title": "Enter Sandman",
+                "artist": "Metallica",
+                "year": 1991,
+                "genres": ["Metal", "Heavy Metal", "Hard Rock"]
+            },
+            {
+                "title": "Wonderwall",
+                "artist": "Oasis",
+                "year": 1995,
+                "genres": ["Rock", "Britpop", "Alternative Rock"]
+            },
+            {
+                "title": "Sweet Child o' Mine",
+                "artist": "Guns N' Roses",
+                "year": 1987,
+                "genres": ["Rock", "Hard Rock", "Glam Metal"]
+            }
+        ];
+
+        var jsonString = JSON.stringify(songList, null, 4);
+        document.write('<pre>' + jsonString + '</pre>');
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON 3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.get("songs.json", function(data) {
+                var genres = [];
+                data.forEach(function(song) {
+                    song.genres.forEach(function(genre) {
+                        if (!genres.includes(genre)) {
+                            genres.push(genre);
+                            $("#genre").append(`<option value="${genre}">${genre}</option>`);
+                        }
+                    });
+                });
+
+                $("#filter-button").click(function() {
+                    var selectedGenre = $("#genre").val();
+                    var filteredSongs = data.filter(function(song) {
+                        return song.genres.includes(selectedGenre);
+                    });
+                    $("#filtered-songs").empty();
+                    filteredSongs.forEach(function(song) {
+                        $("#filtered-songs").append(`<div>${song.title}</div>`);
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="genre-form">
+        <label for="genre">Choose a genre:</label>
+        <select id="genre">
+        </select>
+        <button type="button" id="filter-button">Filter</button>
+    </form>
+    <div id="filtered-songs"></div>    
+</body>
+</html>
