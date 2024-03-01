@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+hr {
+    width: 500px;
+}
+
+h2, h3 {
+    text-decoration: underline;
+}
+
+/* Title */
+#title {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Board Styles */
+#board {
+    width: 350px;
+    height: 420px;
+    margin: 0 auto;
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    /* Box */
+    border: 2px solid lightgray;
+    width: 60px;
+    height: 60px;
+    margin: 2.5px;
+
+    /* Text */
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Keyboard Styles */
+.keyboard-row {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.key-tile {
+    /* Box */
+    width: 36px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid lightgray;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enter-key-tile {
+    width: 76px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid lightgray;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Feedback Colors */
+.correct {
+    background-color: #6AAA64;
+    color: white;
+    border-color: white;
+}
+
+.present {
+    background-color: #C9B458;
+    color: white;
+    border-color: white;
+}
+
+.absent {
+    background-color: #787C7E;
+    color: white;
+    border-color: white;
+}
+
+/* Stats Popup Styles */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+/* Statistics Table */
+.statistics-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.statistics-table td {
+    padding: 1px 8px 8px 8px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.statistics-table tr:nth-child(odd) td {
+    vertical-align: bottom;
+}
+
+.statistics-table tr:nth-child(even) td {
+    vertical-align: top;
+}
+
+
+/* Guess Chart */
+#guess-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.guess-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.guess-label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.guess-bar {
+    height: 20px;
+    background-color: lightgray;
+    color: white;
+    text-align: right;
+    padding: 0px 5px 0px 5px;
+}
+
+.guess-bar.green {
+    background-color: #6AAA64;
+}
+
+.guess-bar.empty {
+    padding: 0px;
+}
+
+/* Font Sizes */
+.large {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.small {
+    font-size: 0.8em;
+}
+
+/* Restart Button */
+.restart-button {
+    padding: 10px 20px;
+    font-size: 18px;
+}
