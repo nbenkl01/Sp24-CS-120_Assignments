@@ -7623,12 +7623,12 @@ a.anchor-link {
 <ul>
 <li>show all titles and all genres that correspond to them - hint: you will need a join for this.</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">artist</span><span class="p">,</span><span class="w"> </span><span class="k">g</span><span class="p">.</span><span class="n">genre</span>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="k">g</span><span class="p">.</span><span class="n">genre</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Songs</span><span class="w"> </span><span class="n">s</span>
 <span class="k">JOIN</span><span class="w"> </span><span class="n">SongGenres</span><span class="w"> </span><span class="n">sg</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">song_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sg</span><span class="p">.</span><span class="n">song_id</span>
 <span class="k">JOIN</span><span class="w"> </span><span class="n">Genres</span><span class="w"> </span><span class="k">g</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">sg</span><span class="p">.</span><span class="n">genre_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">g</span><span class="p">.</span><span class="n">genre_id</span><span class="p">;</span>
 </pre></div>
-<p><img alt="q24b" src="images/2_2a.png"/></p>
+<p><img alt="q24b" src="images/2_2b.png"/></p>
 </div>
 </div>
 </div>
